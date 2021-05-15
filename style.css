@@ -1,0 +1,303 @@
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto';
+    font-size: 19px;
+}
+
+header {
+    background: #00ff80;
+    width: 100%;
+}
+
+nav.menu {
+    margin: 50px 0 0 0;
+    display: block;
+    width: 100%;
+    font-size: 0;
+}
+
+nav.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+nav.menu ul li {
+    width: 100%;
+}
+
+nav.menu a {
+    display: block;
+    padding: 0 15px;
+    color: white;
+    line-height: 2em;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+
+nav.menu a {
+    line-height: 2em;
+    padding: 0 15px;
+}
+
+.logo-div {
+    box-sizing: border-box;
+    width: auto;
+    order: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: #00ff80 5px solid;
+}
+
+.logo-div > a > .logo {
+    box-sizing: border-box;
+    float: left;
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+.logo-div .logo > .img-logo {
+    float: left;
+}
+
+.logo-div .logo > .logo-text {
+    box-sizing: border-box;
+    float: left;
+    font-size: 2em;
+    text-align: center;
+    color: black;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+
+nav.menu a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail p{
+    text-align: center;
+}
+
+.content a{
+    text-decoration: none;
+    color: #00B156;
+}
+
+.content a:hover {
+    color: #00b156da;
+}
+
+.title-centerer {
+    width: 360px;
+    text-align: left;
+    margin: auto;
+}
+
+.main-article {
+    background: rgb(36, 36, 36);
+    color: white;
+    padding: 10px;
+}
+
+#flexbox-articles {
+    display: flex;
+    max-width: 960px;
+    margin: auto;
+    border-bottom: solid 1px gray;
+}
+
+.medium-content {
+    flex: 3;
+    padding-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #00B156;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #00B156da;
+}
+
+.medium-thumbnail {
+    flex: 2;
+    text-align: right;
+}
+
+footer {
+    background: rgb(22, 22, 22);
+    color: rgb(201, 201, 201);
+    padding: 50px;
+}
+
+.articles {
+    padding: 30px 0;
+}
+
+.small-articles {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: auto;
+    margin: auto;
+    background: #f1f1f1;
+    border-bottom: rgba(85, 85, 85, 0.25) 1px solid;
+}
+
+.small-article {
+    margin: 0 30px;
+    display: inline-block;
+}
+
+.article-thumbnail p {
+    text-align: center;
+}
+
+article h1 {
+    font-size: 2em;
+    color: #00B156;
+    margin-top: 0;
+}
+
+.image-centerer {
+    text-align: center;
+}
+
+footer {
+    font-size: 15px;
+}
+
+@media (min-width: 725px){
+    nav.menu {
+        margin-top: 0;
+    }
+
+    nav.menu ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.menu ul li{
+        width: auto;
+        display: inline-block;
+    }
+
+    #menu-centerer {
+        margin-right: 4cm;
+    }
+
+    nav.menu a {
+        line-height: 50px;
+        position: relative;
+    }
+
+    nav.menu a:hover::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: rgba(0, 0, 0, 0.15);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    #flexbox {
+        display: flex;
+        max-width: 960px;
+        margin: auto;
+    }
+
+    .thumbnail {
+        flex: 2;
+    }
+
+    .content {
+        flex: 3;
+    }
+
+    .thumbnail p{
+        text-align: left;
+    }
+
+    .title-centerer {
+        width: auto;
+        text-align: left;
+        margin: 0;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 960px) {
+    .small-articles {
+        width: 960px;
+    }
+
+    article {
+        width: 960px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .thumbnail img {
+        width: 100%;
+        height: auto;
+    }
+
+    .title-centerer {
+        width: auto;
+    }
+
+    .image-centerer img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .medium-content p {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .medium-thumbnail img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 960px) {
+    .article-thumbnail img {
+        width: 100%;
+        height: auto;
+    }
+}
