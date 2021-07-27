@@ -194,6 +194,10 @@ footer {
     font-size: 15px;
 }
 
+article {
+    margin: 0 20px;
+}
+
 @media (min-width: 725px){
     nav.menu {
         margin-top: 0;
